@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icnon.png" type="image/x-icon">
+    <title>Pathfinder</title>
+</head>
+
+<body ondragstart="return false;" ondrop="return false;">
+    <header>
+        <div class="navbar">
+            <h1 class="nav-h">
+                Path Finder
+            </h1>
+            <div class="speeddropdown">
+                <button onclick="DropDown(event)" id='speedbtntext' class='btn-speed'>speed: Fast<i style="padding-left:10px"
+                        class="fa fa-caret-down"></i></button>
+                <div class="speeddropdownContent">
+                    <a onclick="changeSpeed(this)" class='speed-link' href="#">Fast</a>
+                    <a onclick="changeSpeed(this)" class='speed-link' href="#">slow</a>
+                    <a onclick="changeSpeed(this)" class='speed-link' href="#">Average</a>
+                </div>
+            </div>
+            <div class="algodropdown">
+                <button onclick="DropDown(event)" class='btn-algo' id='algobtntext'>Algorithm's<i
+                        style="padding-left:10px" class="fa fa-caret-down"></i></button>
+                <div class="algodropdownContent">
+                    <a onclick="changeAlgo(this)" class='algo-link' href="#">Breadth first search</a>
+                    <a onclick="changeAlgo(this)" class='algo-link' href="#">Best first search</a>
+                    <a onclick="changeAlgo(this)" class='algo-link' href="#">Dijkstra</a>
+                    <a onclick="changeAlgo(this)" class='algo-link' href="#">A *</a>
+                </div>
+            </div>
+            <div class="MazeDropDown">
+                <button onclick="DropDown(event)" id="mazebtntext" class='btn-maze'><span></span>Maze
+                    generation</span><i style="padding-left:10px" class="fa fa-caret-down"></i></button>
+                <div class="mazaDropDowncontent">
+                    <a class='maze-link' onclick="randomMaze()" href="#">Random Maze</a>
+
+                </div>
+            </div>
+            <div class="speeddropdown" style="margin: 0;padding: 0;">
+                <button onclick="clearAll()" class='speeddropdown btn-speed' id='btnclearswalls'
+                    style='border: none; color: rgb(6, 122, 83);'>clear All</button>
+            </div>
+            <div class="speeddropdown" style="margin: 0;padding: 0;">
+                <button onclick="clearPath()" class='speeddropdown btn-speed' id='btnclearswalls'
+                    style='border: none; color: rgb(6, 122, 83);'>clear Path and Visited nodes</button>
+            </div>
+    </header>
+    
+    <div class="container">
+        <div class="visualize">
+            <button onclick="visualize()" id='btnVis' class="btn-visualize">
+                Visualize {<span id='algoName'>Algorithm</span>}
+            </button>
+            <div class='algo-desc'>
+                <div class="algo-desc" id='algoDesc'>
+                    Path findind Visualizeer visualizes searching algorithms and give you the
+                    shortest path.</div>
+                <div class="box">
+                    <p style="margin: 0;color: rgb(6, 136, 136);">Visited Nodes</p>
+                    <i class='boxVisited' id='boxVisited'></i>
+                    <p id='textV'>0</P>
+                    <p style="margin: 0; color: rgb(173, 192, 2);" id='pn'>Path Nodes</p>
+                    <i class='boxVisited' id='pathVisited'></i>
+                    <p id='textP'>0</p>
+                </div>
+                </p>
+            </div>
+        </div>
+        <div class="table">
+            <table oncontextmenu="return false;" id="gridTable" draggable="false" cellspacing=0 CELLPADDING=0>
+            </table>
+        </div>
+        <div class="popup" id="popup">
+            <span style="float: left; font-size:25px; font-weight: 700;float: right;
+            padding-right: 10px;" onclick="closePopUp(this)" class="close" id='close'>x</span>  
+            <p style="float: left; padding-right: 10px; margin-top: 5px;text-align:center; font-weight: 700">
+                <strong style="center;color: darkgreen;text-align: end;">Demonstration</strong>
+                <br><br>
+                Click and drag mouse on grid to make <strong style="color: red;">walls</strong> 
+                select an <strong style="color: red;">Algorithm</strong> and click visualize</p>
+            
+            <img src="homeAnimation1.gif" alt="" style="transform: scale(0.9);">
+            <!-- <a href="tutorialpage.html" id='btnVis' class="btn-tut" style="font-style: normal;text-decoration: none;
+                 color: white;">Tutorial page</a> -->
+        </div>
+</body>
+<script src="scriptBasics.js"></script>
+
+</html>

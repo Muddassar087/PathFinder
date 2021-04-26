@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background:#fffdfd;
+}
+.navbar{
+    overflow: hidden;
+    padding:0px 50px;
+    background: #F8F8F8;
+    border: 2px solid #E7E7E7;
+}
+.nav-h{
+    float: left;
+    color: rgb(95, 87, 87);
+    
+    min-width: 176.02px;
+}
+.btn-algo{
+    border-radius: 20px;
+    background:rgb(0, 151, 106);
+    color:white;
+    padding: 15px 20px;
+    cursor: pointer;
+    border: 1px solid grey;
+    font-size: 20px;
+    outline-style: inherit;
+}
+.algodropdown{
+    float:right;
+    margin: 10px 30px;
+    min-width: 89.94.94px;
+    max-width: max-content;
+}
+.speeddropdown{
+    float:right;
+    margin: 10px 0px;
+    padding: 0px 30px;
+    min-width: 177.94px;
+}
+.btn-speed{
+    cursor: pointer;
+    background:none;
+    padding:15px 20px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    font-size: 20px;
+    outline-style: inherit;
+}
+.btn-visualize{
+    float: right;
+    padding: 15px 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    color: white;
+    outline-color: none;
+    background-color:rgb(28, 187, 139);
+    outline:none;
+    border-radius: 5px;
+    box-shadow: 0px 0px;
+    transition: all 0.3s;
+    text-shadow: 0px  -1px 0px rgba(0,0,0,.5);
+    text-shadow: x-offset y-offset blur color;
+    -webkit-box-shadow: 0px 6px 0px #22af5d, 0px 3px 15px rgba(0,0,0,.4);
+}
+.btn-algo:hover{
+    background-color:rgb(14, 247, 177);
+    color: rgb(33, 95, 64);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+
+}
+.btn-speed:hover{
+    color: rgb(0, 151, 106);
+    border: 1px solid rgb(0, 151, 106);
+}
+
+.speeddropdown{
+    float: right;
+}
+.MazeDropDown{
+    float: right;
+    margin: 10px 30px;
+}
+.mazaDropDowncontent{
+    display: none;
+    border-radius: 10px;
+    flex-direction: column;
+    position: absolute;
+    min-width: 186.22px;
+    width:240px;
+    min-width: 160px;
+    margin: 10px 0;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    z-index: 1;
+    background: darkgrey;
+    animation: fade 0.2s linear forwards;
+}
+
+.algodropdownContent {
+    display: none;
+    border-radius: 10px;
+    flex-direction: column;
+    position: absolute;
+    min-width: 186.22px;
+    width: 10%;
+    min-width: 160px;
+    margin: 10px 0;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    z-index: 1;
+    background: darkgrey;
+    animation: fade 0.2s linear forwards;
+}
+.clearContent{
+    z-index: 1;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    position: absolute;
+    background: darkgrey;
+    animation: fade 0.2s linear forwards;
+}
+.btn-maze:hover{
+    background-color:rgb(14, 247, 177);
+    color: rgb(33, 95, 64);
+    transition: all 0.5s;
+}
+.btn-maze{
+    border-radius: 20px;
+    background:rgb(0, 151, 106);
+    color:white;
+    padding: 15px 20px;
+    cursor: pointer;
+    border: 1px solid grey;
+    font-size: 20px;
+    outline-style: inherit;
+}
+.maze-link{
+    float: left;
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+    margin: 5px 10px;
+    padding: 10px;
+    width: max-content;
+    border-radius:7px;
+    transition:all 0.5s;
+}
+.maze-link:hover{
+    color:rgb(33, 95, 64);
+    background-color: rgba(3, 250, 106, 0.966)
+}
+.algo-link{
+    float: left;
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+    margin: 5px 10px;
+    padding: 10px;
+    width: max-content;
+    border-radius:7px;
+    transition:all 0.5s;
+}
+.speed-link{
+    float: left;
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+    margin: 5px 10px;
+    padding: 10px;
+    width: max-content;
+    border-radius:7px;
+    transition:all 0.5s;
+}
+.speed-link:hover{
+    color:rgb(33, 95, 64);
+    background-color: rgba(3, 250, 106, 0.966)
+
+}
+.algo-link:hover{
+    color:rgb(33, 95, 64);
+    background-color: rgba(3, 250, 106, 0.966);
+}
+.container{
+    position: relative;
+    display:flex;
+    flex-direction:column
+}
+.speeddropdownContent{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    min-width: 186.22px;
+    width: 10%;
+    border-radius: 10px;
+    min-width: 190ppx;
+    margin: 10px 0;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    z-index: 1;
+    background: darkgrey;
+    animation: fade 0.2s linear forwards;
+}
+.visualize{
+    font-family: 'Lato', sans-serif;
+    margin: 19px 40px;
+    width: 91%;
+}
+.table{
+    padding:10px;
+}
+
+
+.algo-desc{
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    float:right;
+    padding: 6px 0;
+    margin: 0 20px;
+}
+.unv{   
+    border: 1px solid rgb(175, 216, 248);
+    border-bottom: none;
+    border-left: none;
+}
+#gridTable{
+    min-width: 1430px;
+    min-height: 729px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-sizing: content-box;
+}
+#gridTable td{
+    width: 25px;
+    height: 25px;
+}
+.wall{
+    background-color: #011527e1;
+    border-width: 1px;
+    animation-name: grow;
+    animation-duration: 0.2s;
+    /* box-shadow: 0px 0px 3px #011527e1; */
+    animation-timing-function: ease-out;
+}
+.start {
+    background-image: url("start.svg");
+    background-size: 20px;
+    border-top: 1px solid rgb(175, 216, 248);
+    border-right: 1px solid rgb(175, 216, 248);
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: growSE;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+}
+.current{
+    background-color: yellow;
+}
+.boxVisited{
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    width: 20px;
+    height: 25px;
+    margin: 3px 7px;
+    background-color: rgba(0, 190, 218, 0.75);
+    box-shadow: 0px 0px 4px 0px #787e7e;
+    float: right;
+}
+.box {
+    display: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    padding: 6px 0;
+
+    float:right;
+    /* margin: 10px 20px;
+    margin: 10px 20px; */
+}
+.box p,.box i{
+    float: right;
+}
+#textP, #textV{
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    padding: 0 10px;
+    margin: 0;
+    float: left;
+}
+#btnclearswalls:hover{
+    color: red;
+}
+#pathVisited{
+    background-color: yellow;
+}
+.shortestPath{
+    background-color: #d3fc04a7;
+    border-width: 1px;
+    animation-name: grow;
+    animation-duration: 0.1s;
+    animation-timing-function: ease-out;
+}
+.end{
+    background-image: url("end.svg");
+    border-top: 1px solid rgb(175, 216, 248);
+    border-right: 1px solid rgb(175, 216, 248);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: growSE;
+    animation-duration: .4s;
+    animation-timing-function: ease-in;
+}
+.visited{
+    border: 1px solid rgb(175, 216, 248);
+    animation-name: visitedAnimation;
+    animation-duration: 1.0s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+#pn,
+#pathVisited,
+#textP{
+    display: none;
+}
+#pathVisited{
+    background-color: yellow;
+}
+.popup{
+    font-size: large;
+    min-width: 319.59px;
+    width: 700px;
+    border: 3px solid rgb(150, 147, 147);
+    padding: 20px;
+    position: fixed;
+    background: white;
+    top: 25%;
+    left: 30%;
+    z-index: 1;
+    animation-name: growPopup;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+}
+.popup p{
+    width: 90%;
+    margin-top:10px;
+}
+.close:hover{
+    color: rgb(168, 22, 22);
+    cursor: pointer;
+}
+.btn-tut{
+    float: right;
+    padding: 15px 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    text-shadow: 0px  -1px 0px rgba(0,0,0,.5);
+    background-color: rgb(28, 187, 139);
+}
+.btn-tut:hover{
+    background-color:rgb(19, 211, 153);
+    box-shadow: 1px 1px 5px 0px rgb(131, 123, 123);
+
+}
+.visualizing{
+    float: right;
+    padding: 15px 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    color: white;
+    background-color:rgb(187, 39, 28);
+    outline:none;
+    border-radius: 5px;
+    box-shadow: 0px 0px;
+    text-shadow: 0px  -1px 0px rgba(0,0,0,.5);
+    text-shadow: x-offset y-offset blur color;
+    -webkit-box-shadow: 0px 6px 0px #9b3a57, 0px 3px 15px rgba(0,0,0,.4);
+}
+@keyframes visitedAnimation {
+        
+    0% {
+        transform: scale(0);
+        background-color: #1a3c3b;
+        border-radius: 100%;
+    }
+    50% {
+        background-color: #1d615f;
+    }
+    75% {
+        transform: scale(1.2);
+        background-color:#03f7ffde;
+    }
+    100% {
+        transform: scale(1);
+        background-color:rgba(0, 190, 218, 0.75);
+    }
+}
+
+@keyframes fade {
+    from {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(30px);
+    }
+    to { 
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+}
+@keyframes grow {
+    from {
+        transform: scale(0);
+        box-shadow: 0px 0px 1px #011527e1;
+    }
+    to { 
+        transform: scale(1);
+    }
+}
+@keyframes growSE {
+    from {
+        transform: scale(0.5);
+    }
+    to { 
+        transform: scale(1.1);
+    }
+}
+@keyframes growPopup {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to { 
+        transform: scale(1);
+        opacity: 1;
+    }
+}
